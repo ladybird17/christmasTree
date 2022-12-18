@@ -1,0 +1,12 @@
+body{
+	font-family: 'Gowun Batang', serif;
+	background-image:url( "/image/christmas tree_angle.png" );
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+a{
+  text-decoration: none;
+  color: black;
+}

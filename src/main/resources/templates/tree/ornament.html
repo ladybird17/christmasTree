@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/bootstrap.css" th:href="@{/css/bootstrap.css}">
+<link rel="stylesheet" th:href="@{/css/default.css}"></link>
+<head>
+  <meta charset="UTF-8">
+  <title>ornament</title>
+</head>
+<body>
+  <main class="container py-5">
+    <div class="row">
+      <section class="col-sm-2 border-right">
+
+      </section>
+      <section class="col-sm-8">
+        <article class="container text-center row">
+          <div class="row justify-content-md-center pt-5">
+            <form action="/tree/update" id="frm" method="GET" enctype="multipart/form-data">
+              <div class="rounded-circle mx-auto mb-5" style="background-color: rgba(248, 248, 255, 0.4); width:160px; height:160px;">
+                <img src="/image/christmas ball.png" style="object-fit: contain; width:130px; height:130px;">
+              </div>
+              <div class="rounded" style="background-color: rgba(248, 248, 255, 0.4);">
+              <p th:text="${ornament.contents}"></p>
+              <p th:text="${ornament.name}"></p>
+              <p th:text="${ornament.createdOn}"></p>
+              </div>
+              <div class="form-group">
+                <input type="hidden" th:value="${ornament.id}" id="id" name="id" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-primary">수정</button>
+              <a type="button" class="btn btn-warning" href="/tree">메인으로</a>
+            </form>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
